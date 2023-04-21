@@ -7,8 +7,52 @@ public class usuario {
    private String cargo;
    private String login;
    private String senha;
+   private String documento;
+   public usuario (String name,String cpf){
+
+    this.nome=name;
+    this.documento=cpf;
+    
+   }
+   /*public usuario (String name,String emails,String phone,String atributo,String log,String code,String cpf){
+
+    this.nome=name;
+    this.email=emails;
+    this.telefone=phone;
+    this.cargo=atributo;
+    this.login=log;
+    this.senha=code;
+    this.documento=cpf;
+    
+   }*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Getter e settings zone
+public String getDocumento() {
+    return documento;
+}
+public void setDocumento(String documento) {
+    this.documento = documento;
+}
 public String getNome() {
     return nome;
 }
