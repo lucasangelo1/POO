@@ -1,12 +1,15 @@
 package pack;
 import java.util.ArrayList;
 import java.util.Scanner;
+import Repositorio.*;
 
 public class Aluno extends usuario {
 
     
     public int i;
-    Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
+    public  ArrayList<Livro> book= new ArrayList<Livro>();
+    public int contadorLivro;
 
     public Aluno(String name, String cpf) {
         super(name, cpf);
@@ -16,17 +19,30 @@ public class Aluno extends usuario {
         super(name, emails, phone, atributo, log, code, cpf);
 
     }*/
+    public static void cadastraralunos(){
+        String name,emails,phone,atributo,log,code,cpf;
 
-    public void exibirLivros(books[]){
-        for (int j; j<books.length; j++ ){
-            System.out.println("nome do livro: "+books[i].nome+"nome do autor: "+books[i].autor+" data de delucao"+ books[i].dataDevolucao);
-        }
-    }
-    public void renovarLivro(){
+        atributo= "Aluno";
+        System.out.println("Digite o nome do aluno :");
+        name= scanner.next();
+       /* System.out.println("Digite o email do aluno :");
+        emails= scanner.next();
+        System.out.println("Digite o telefone do aluno :");
+        phone= scanner.next();    
+        System.out.println("Digite um login para o aluno :");
+        log= scanner.next();
+        System.out.println("Digite uma senha para o aluno :");
+        code= scanner.next();*/
+        System.out.println("Digite o cpf do aluno :");
+        cpf= scanner.next();
+        //Aluno aluno1= new Aluno(name,emails,phone,atributo,log,code,cpf);
+        Aluno aluno1=new Aluno(name,cpf);
+        RepositorioAluno.adiciona(aluno1);
+    } 
 
 
-    }
 
+    
 
 
     

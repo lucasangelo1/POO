@@ -1,13 +1,24 @@
 
-import Repositorio.RepositorioAluno;
-import Repositorio.RepositorioGerente;
+import Repositorio.*;
+
 import pack.*;
+
 
 public class gerenciamento {
     public static void main(String[] args) throws Exception {
-        gerente.cadastrarGerente();
-        gerente.cadastrarGerente();
-        RepositorioGerente.exibirgerente();
+        Aluno.cadastraralunos();
+        Aluno.cadastraralunos();
+        RepositorioAluno.emprestarlivro(RepositorioAluno.procurarAluno());
+        RepositorioAluno.emprestarlivro(RepositorioAluno.procurarAluno());
+        RepositorioAluno.exibirlivros(RepositorioAluno.procurarAluno());
+        RepositorioAluno.exibirlivros(RepositorioAluno.procurarAluno());
+        
+        //RepositorioAluno.retirarlivro(RepositorioAluno.procurarAluno());
+        
+        
+    
+        
+
     
     }
 }

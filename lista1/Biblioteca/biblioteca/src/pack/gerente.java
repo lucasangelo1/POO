@@ -1,6 +1,5 @@
 package pack;
 import Repositorio.*;
-import pack.Aluno;
 import java.util.Scanner;
 
 
@@ -36,27 +35,7 @@ public class gerente extends usuario {
         RepositorioGerente.adiciona(gerente);
 
     }
-    public static void cadastraralunos(){
-        String name,emails,phone,atributo,log,code,cpf;
-
-        atributo= "Aluno";
-        System.out.println("Digite o nome do aluno :");
-        name= scanner.next();
-       /* System.out.println("Digite o email do aluno :");
-        emails= scanner.next();
-        System.out.println("Digite o telefone do aluno :");
-        phone= scanner.next();    
-        System.out.println("Digite um login para o aluno :");
-        log= scanner.next();
-        System.out.println("Digite uma senha para o aluno :");
-        code= scanner.next();*/
-        System.out.println("Digite o cpf do aluno :");
-        cpf= scanner.next();
-        //Aluno aluno1= new Aluno(name,emails,phone,atributo,log,code,cpf);
-        Aluno aluno1=new Aluno(name,cpf);
-        RepositorioAluno.adiciona(aluno1);
-
-    } 
+    
     
 
     
