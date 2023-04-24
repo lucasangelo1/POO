@@ -57,12 +57,19 @@ public class RepositorioAluno {
         aluno.get(i).contadorLivro++;
     }
 
+    public static void excluirAluno(int i){
+        aluno.remove(i);
+
+
+    }
+
+
     public static void retirarlivro(int i){
         String nomeLivro;
         
         System.out.println("digite o nome do livro que deseja retirar");
         nomeLivro=scanner.next();
-        for (int j=0;j<((aluno.get(i).contadorLivro)+1);j++){
+        for (int j=0;j<((aluno.get(i).book.size()));j++){
             if ((aluno.get(i).book.get(j).nome).equals(nomeLivro)){
                     aluno.get(i).book.remove(j);
             }
@@ -74,7 +81,7 @@ public class RepositorioAluno {
 
     }
     public static void exibirlivros(int i){
-        for (int j=0; j<((aluno.get(i).contadorLivro)+1);j++ ){
+        for (int j=0; j<((aluno.get(i).contadorLivro));j++ ){
             System.out.println(aluno.get(i).book.get(j).nome);
 
         }
